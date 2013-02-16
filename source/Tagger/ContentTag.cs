@@ -36,7 +36,7 @@
         // render child tags to the output
         protected override string OnGetContent()
         {
-            return string.Join(" ", _children.Select(x => x.GetHtml()).ToArray());
+            return string.Join("", _children.Select(x => x.GetHtml()).ToArray());
         }
 
         private List<ICreateHtml> _children;

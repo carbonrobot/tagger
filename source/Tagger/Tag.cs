@@ -87,7 +87,7 @@
         /// <summary>
         /// Creates a self closing tag with no matching end tag and no content
         /// </summary>
-        protected T SelfClose()
+        public T SelfClose()
         {
             _selfClosing = true;
             return (T)this;
@@ -172,7 +172,7 @@
 
             // closing
             if (_selfClosing)
-                tag.Append("/>");
+                tag.Append(" />");
             else
                 tag.AppendFormat(">{0}</{1}>", OnGetContent(), _name);
 
