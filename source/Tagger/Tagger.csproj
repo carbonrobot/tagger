@@ -36,10 +36,17 @@
   <ItemGroup>
     <Compile Include="Attributes.cs" />
     <Compile Include="ContentTag.cs" />
+    <Compile Include="Optgroup.cs" />
+    <Compile Include="Option.cs" />
+    <Compile Include="Select.cs" />
     <Compile Include="FormElement.cs" />
     <Compile Include="HtmlTag.cs" />
     <Compile Include="ICreateHtml.cs" />
     <Compile Include="Input.cs" />
+    <Compile Include="Label.cs" />
+    <Compile Include="List.cs" />
+    <Compile Include="ListItem.cs" />
+    <Compile Include="ListType.cs" />
     <Compile Include="Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Textbox.cs" />

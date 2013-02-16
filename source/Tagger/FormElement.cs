@@ -8,7 +8,7 @@
     /// <summary>
     /// Form element
     /// </summary>
-    public abstract class FormElement : ContentTag
+    public abstract class FormElement : TextTag
     {
         /// <summary>
         /// Constructs a new form element
@@ -28,7 +28,31 @@
         {
             return (FormElement) this.Attribute(Attributes.Name, value);
         }
-        
+
+        /// <summary>
+        /// Adds the autofocus attribute to this tag
+        /// </summary>
+        public FormElement Autofocus()
+        {
+            return (FormElement)this.Attribute(Attributes.Autofocus, "true");
+        }
+
+        /// <summary>
+        /// Adds the disabled attribute to this tag
+        /// </summary>
+        public FormElement Disabled()
+        {
+            return (FormElement)this.Attribute(Attributes.Disabled, "true");
+        }
+
+        /// <summary>
+        /// Adds the required attribute to this tag
+        /// </summary>
+        public Select Required()
+        {
+            return (Select)this.Attribute(Attributes.Required, "true");
+        }
+
         /// <summary>
         /// Set the value attribute of this tag
         /// </summary>
