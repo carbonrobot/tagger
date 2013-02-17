@@ -17,5 +17,7 @@
         public const string Disabled = "disabled";
         public const string Required = "required";
         public const string Selected = "selected";
+        public const string Source = "src";
+        public const string Async = "async";
     }
 }
