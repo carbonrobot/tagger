@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tagger", "Tagger.csproj", "{AF239DDB-8619-4A7C-9CB3-2F3B97C894B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tagger", "Tagger\Tagger.csproj", "{AF239DDB-8619-4A7C-9CB3-2F3B97C894B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tagger.Tests", "..\tests\Tagger.Tests\Tagger.Tests.csproj", "{6BF89B0D-B60B-4B35-B6DC-21B275A8391D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tagger.Tests", "Tests\Tagger.Tests\Tagger.Tests.csproj", "{6BF89B0D-B60B-4B35-B6DC-21B275A8391D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DE377FA1-009E-467D-870A-49CE4129F8D1}"
 EndProject
