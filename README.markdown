@@ -41,7 +41,12 @@ A fluid html tag library built with C#
 
 #### Surrounding tags
 
-	var button = new Button().SurroundWith(new Form());
+	var button = new Button(ButtonType.Button)
+					.SurroundWith(new Form());
+
+	<form>
+		<button type="button"></button>
+	</form>
 					
 #### Void tags
 
