@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Tagger : Fluid Html Tag Builder in C#" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Tagger</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/carbonrobot/tagger">View on GitHub</a>
+
+          <h1 id="project_title">Tagger</h1>
+          <h2 id="project_tagline">Fluid Html Tag Builder in C#</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/carbonrobot/tagger/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/carbonrobot/tagger/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Tagger</h1>
+
+<p>A fluid html tag library built with C#</p>
+
+<h3>Basic usages</h3>
+
+<pre><code>var div = new Div()
+            .Class("input-wrap")
+            .Add(new Label()
+                    .For("email")
+                    .Text("Email Address:")
+            )
+            .Add(new Input()
+                    .Id("email")
+                    .Name("email")
+                    .Class("required")
+                    .AddClass("email")
+            );
+</code></pre>
+
+<h4>Call <code>div.GetHtml()</code> or <code>div.ToString()</code> to get the html output</h4>
+
+<pre><code>&lt;div class="input-wrap"&gt;
+    &lt;label for="email"&gt;Email Address:&lt;/label&gt;
+    &lt;input type="textbox" id="email" name="email"&gt;&lt;/input&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Adding multiple tags using parameters</h4>
+
+<pre><code>var div = new Div()
+            .Add(
+                new Span().Text("Option 1"),
+                new Span().Text("Option 2"),
+                new Span().Text("Option 3")
+            );
+&lt;div&gt;
+    &lt;span&gt;Option 1&lt;/span&gt;
+    &lt;span&gt;Option 2&lt;/span&gt;
+    &lt;span&gt;Option 3&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Surrounding tags</h4>
+
+<pre><code>var button = new Button(ButtonType.Button)
+                .SurroundWith(new Form());
+
+&lt;form&gt;
+    &lt;button type="button"&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h4>Void tags</h4>
+
+<pre><code>var tag = new HtmlTag("hr").SelfClose();
+
+&lt;hr /&gt;
+</code></pre>
+
+<h3>Form elements</h3>
+
+<p>Some form elements have special usage</p>
+
+<h4>Select lists</h4>
+
+<pre><code>var tag = new Select()
+            .Add(
+                new Option().Text("Option 1").Value("1"),
+                new Option().Text("Option 2").Value("2"),
+                new Option().Text("Option 3").Value("3")
+            );
+&lt;select&gt;
+    &lt;option value="1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="2"&gt;Option 2&lt;/option&gt;
+    &lt;option value="3"&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<h4>Select lists using <code>KeyValuePair&lt;string, string&gt;</code>
+</h4>
+
+<pre><code>var options = new Dictionary&lt;string, string&gt;();
+options.Add("1", "Option 1");
+options.Add("2", "Option 2");
+options.Add("3", "Option 3");
+
+var tag = new Select().Add(options);
+
+&lt;select&gt;
+    &lt;option value="1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="2"&gt;Option 2&lt;/option&gt;
+    &lt;option value="3"&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<h3>Tables</h3>
+
+<p>Coming Soon!</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Tagger maintained by <a href="https://github.com/carbonrobot">carbonrobot</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
