@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Tagger")]
-[assembly: AssemblyDescription("Fluid Html Tag Builder")]
+[assembly: AssemblyDescription("Tagger is a fluid Html tag builder that supports Html creation in a compile safe and testable way.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Charles Brown")]
 [assembly: AssemblyProduct("Tagger")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.4.0.*")]
-[assembly: AssemblyFileVersion("0.4.0.0")]
+[assembly: AssemblyVersion("0.5.0.*")]
+[assembly: AssemblyFileVersion("0.5.0.0")]
