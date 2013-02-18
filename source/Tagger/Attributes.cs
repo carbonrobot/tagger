@@ -23,5 +23,6 @@
         public const string Target = "target";
         public const string Action = "action";
         public const string Method = "method";
+        public const string Checked = "checked";
     }
 }

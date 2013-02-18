@@ -1,10 +1,5 @@
 ﻿namespace Tagger
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-
     /// <summary>
     /// Label
     /// </summary>
@@ -16,6 +11,7 @@
         public Label()
             : base("label")
         {
+            
         }
 
         /// <summary>
