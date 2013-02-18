@@ -3,7 +3,7 @@
     /// <summary>
     /// Option tag
     /// </summary>
-    public class Option : TextTag
+    public class Option : TextTag<Option>
     {
         /// <summary>
         /// Constructs a new option
@@ -19,16 +19,7 @@
         /// </summary>
         public Option Disabled()
         {
-            return (Option)this.Attribute(Attributes.Disabled, "true");
-        }
-
-        /// <summary>
-        /// Adds a label to this tag
-        /// </summary>
-        /// <param name="value">The name of this label</param>
-        public Optgroup Label(string value)
-        {
-            return (Optgroup)this.Attribute(Attributes.Label, value);
+            return this.Attribute(Attributes.Disabled, "true");
         }
 
         /// <summary>
@@ -36,7 +27,7 @@
         /// </summary>
         public Option Selected()
         {
-            return (Option)this.Attribute(Attributes.Selected, "true");
+            return this.Attribute(Attributes.Selected, "true");
         }
 
         /// <summary>
@@ -46,9 +37,9 @@
         public Option Value(string value)
         {
             if (value == null)
-                return (Option)this;
+                return this;
 
-            return (Option)Attribute("value", value);
+            return Attribute("value", value);
         }
     }
 }

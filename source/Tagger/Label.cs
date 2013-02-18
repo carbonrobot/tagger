@@ -3,7 +3,7 @@
     /// <summary>
     /// Label
     /// </summary>
-    public class Label : TextTag
+    public class Label : TextTag<Label>
     {
         /// <summary>
         /// Construct an html label
@@ -20,7 +20,7 @@
         /// <param name="id">The id of the form element</param>
         public Label For(string id)
         {
-            return (Label) this.Attribute(Attributes.For, id);
+            return this.Attribute(Attributes.For, id);
         }
     }
 }

@@ -3,7 +3,7 @@
     /// <summary>
     /// List item
     /// </summary>
-    public class ListItem : TextTag
+    public class ListItem : TextTag<ListItem>
     {
         /// <summary>
         /// Constructs a new list item

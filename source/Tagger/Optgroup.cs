@@ -3,7 +3,7 @@
     /// <summary>
     /// Option group
     /// </summary>
-    public class Optgroup : ContentTag
+    public class Optgroup : ContentTag<Optgroup>
     {
         /// <summary>
         /// Constructs a new option group
@@ -19,7 +19,7 @@
         /// </summary>
         public Optgroup Disabled()
         {
-            return (Optgroup)this.Attribute(Attributes.Disabled, "true");
+            return this.Attribute(Attributes.Disabled, "true");
         }
 
         /// <summary>
@@ -28,7 +28,7 @@
         /// <param name="value">The name of this group</param>
         public Optgroup Label(string value)
         {
-            return (Optgroup) this.Attribute(Attributes.Label, value);
+            return this.Attribute(Attributes.Label, value);
         }
 
     }

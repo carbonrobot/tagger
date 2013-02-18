@@ -1,6 +1,6 @@
 ﻿namespace Tagger
 {
-    public class Div : TextTag
+    public class Div : TextTag<Div>
     {
         public Div() : base("div")
         {

@@ -1,6 +1,6 @@
 ﻿namespace Tagger
 {
-    public class Input : FormElement
+    public class Input : FormElement<Input>
     {
         
         public Input(string type)

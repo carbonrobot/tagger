@@ -41,7 +41,7 @@
         /// Include a new tag after this one
         /// </summary>
         /// <param name="tag">The tag that should be placed after this one</param>
-        public T Append<T2>(Tag<T2> tag) where T2 : Tag<T2>
+        public T Append<TTag>(Tag<TTag> tag) where TTag : Tag<TTag>
         {
             _append = tag.ToString();
             return (T)this;
@@ -51,7 +51,7 @@
         /// Include a new tag before this tag
         /// </summary>
         /// <param name="tag">The tag that should be placed before this one</param>
-        public T Prepend<T2>(Tag<T2> tag) where T2 : Tag<T2>
+        public T Prepend<TTag>(Tag<TTag> tag) where TTag : Tag<TTag>
         {
             _prepend = tag.ToString();
             return (T)this;
@@ -106,7 +106,7 @@
         /// </summary>
         /// <param name="name">The name of the attribute</param>
         /// <param name="value">The value of the attribute</param>
-        public virtual T Attribute(string name, string value)
+        public T Attribute(string name, string value)
         {
             if (_attributes.ContainsKey(name))
                 _attributes[name] = value;
@@ -131,7 +131,7 @@
         /// <param name="value">The value of the style</param>
         public T Style(string value)
         {
-            return (T) Attribute(Attributes.Style, value);
+            return Attribute(Attributes.Style, value);
         }
 
         /// <summary>
@@ -140,14 +140,14 @@
         /// <param name="value">The value of the title</param>
         public T Title(string value)
         {
-            return (T)Attribute(Attributes.Title, value);
+            return Attribute(Attributes.Title, value);
         }
 
         /// <summary>
         /// Surround this tag with another
         /// </summary>
         /// <param name="parent">The tag that will become the parent</param>
-        public T SurroundWith(ContentTag parent)
+        public T SurroundWith<TTag>(ContentTag<TTag> parent) where TTag : ContentTag<TTag>
         {
             _parent = parent.Add(this);
             return (T)this;
@@ -192,7 +192,7 @@
         private string _append = string.Empty;
         private string _prepend = string.Empty;
         private bool _selfClosing;
-        private ContentTag _parent;
+        private ICreateHtml _parent;
         private string _name;
 
         /*

@@ -3,13 +3,13 @@
     /// <summary>
     /// Form element
     /// </summary>
-    public abstract class FormElement : TextTag
+    public abstract class FormElement<T> : TextTag<T> where T : FormElement<T>
     {
         /// <summary>
         /// Constructs a new form element
         /// </summary>
         /// <param name="name">The name of the element</param>
-        public FormElement(string name)
+        protected FormElement(string name)
             : base(name)
         {
 
@@ -19,37 +19,37 @@
         /// Set the name attribute of this tag
         /// </summary>
         /// <param name="value">The value of the name attribute</param>
-        public FormElement Name(string value)
+        public T Name(string value)
         {
-            return (FormElement) this.Attribute(Attributes.Name, value);
+            return this.Attribute(Attributes.Name, value);
         }
 
         /// <summary>
         /// Adds the autofocus attribute to this tag
         /// </summary>
-        public FormElement Autofocus()
+        public T Autofocus()
         {
-            return (FormElement)this.Attribute(Attributes.Autofocus, "true");
+            return this.Attribute(Attributes.Autofocus, "true");
         }
 
         /// <summary>
         /// Adds the disabled attribute to this tag
         /// </summary>
-        public FormElement Disabled()
+        public T Disabled()
         {
-            return (FormElement)this.Attribute(Attributes.Disabled, "true");
+            return this.Attribute(Attributes.Disabled, "true");
         }
         
         /// <summary>
         /// Set the value attribute of this tag
         /// </summary>
         /// <param name="value">The value of this attribute</param>
-        public FormElement Value(string value)
+        public T Value(string value)
         {
             if (value == null)
-                return (FormElement)this;
+                return (T)this;
 
-            return (FormElement)Attribute("value", value);
+            return Attribute("value", value);
         }
 
     }

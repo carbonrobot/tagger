@@ -6,7 +6,7 @@
     /// <summary>
     /// Select Element
     /// </summary>
-    public class Select : FormElement
+    public class Select : FormElement<Select>
     {
         /// <summary>
         /// Constructs a new select element

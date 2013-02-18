@@ -1,6 +1,6 @@
 ﻿namespace Tagger
 {
-    public class Form : Tag<Form>
+    public class Form : TextTag<Form>
     {
         public Form()
             : base("form")

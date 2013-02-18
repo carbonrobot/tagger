@@ -4,7 +4,7 @@
     /// <summary>
     /// List
     /// </summary>
-    public class List : ContentTag
+    public class List : ContentTag<List>
     {
         /// <summary>
         /// Constructs a new unordered list

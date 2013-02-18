@@ -3,7 +3,7 @@
     /// <summary>
     /// Button
     /// </summary>
-    public class Button : FormElement
+    public class Button : FormElement<Button>
     {
         /// <summary>
         /// Constructs an html button

@@ -34,5 +34,19 @@
 
             Assert.AreEqual("<select><optgroup label=\"Group 1\"><option>Option 1</option><option>Option 2</option></optgroup></select>", tag.ToString());
         }
+
+        [TestMethod]
+        public void TestInheritanceChain()
+        {
+            // test that base classes have a correct return type to their children
+
+            var tag = new Form()
+                .Action("/post")                    // method from Form
+                .Add(new Hidden().Name("test"))     // method from ContentTag<T>
+                .Method("post");                    // method from Form
+
+            Assert.IsNotNull(tag);
+        }
+
     }
 }

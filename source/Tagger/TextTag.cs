@@ -1,28 +1,17 @@
 ﻿namespace Tagger
 {
-    /// <summary>
-    /// Tag that support text
-    /// </summary>
-    public class TextTag : ContentTag
+    public abstract class TextTag<T> : ContentTag<T> where T : TextTag<T>
     {
-        /// <summary>
-        /// Constructs a tag that supports text
-        /// </summary>
-        /// <param name="name"></param>
-        public TextTag(string name)
+        protected TextTag(string name)
             : base(name)
         {
 
         }
 
-        /// <summary>
-        /// Set the text content of the tag
-        /// </summary>
-        /// <param name="text">The text</param>
-        public TextTag Text(string text)
+        public T Text(string text)
         {
             _text = text;
-            return this;
+            return (T)this;
         }
         
         // render text into output
