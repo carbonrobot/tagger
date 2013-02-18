@@ -1,0 +1,1 @@
+nuget pack -build ../source/Tagger/Tagger.csproj
