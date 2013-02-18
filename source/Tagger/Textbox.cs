@@ -14,6 +14,11 @@
             : base("text")
         {
         }
+
+        public Textbox Placeholder(string text)
+        {
+            return (Textbox)Attribute("placeholder", text);
+        }
     }
 
 }
