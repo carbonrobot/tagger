@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Tagger
+﻿namespace Tagger
 {
     /// <summary>
     /// Tag that support text
@@ -24,12 +19,12 @@ namespace Tagger
         /// Set the text content of the tag
         /// </summary>
         /// <param name="text">The text</param>
-        public ContentTag Text(string text)
+        public TextTag Text(string text)
         {
             _text = text;
-            return (ContentTag)this;
+            return this;
         }
-
+        
         // render text into output
         protected override string OnGetContent()
         {
