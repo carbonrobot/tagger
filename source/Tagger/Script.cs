@@ -5,6 +5,7 @@
         public Script()
             : base("script")
         {
+            this.Attribute(Attributes.Type, "text/javascript");
         }
 
         public Script Async()
