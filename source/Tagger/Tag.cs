@@ -63,7 +63,7 @@
         /// <param name="value">The value of the class attribute</param>
         public T Class(string value)
         {
-            return Attribute("class", value);
+            return Attribute(Attributes.Class, value);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@
         /// </summary>
         public string Id()
         {
-            return this.Attribute("id");
+            return this.Attribute(Attributes.Id);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@
         /// <returns></returns>
         public T Id(string id)
         {
-            return Attribute("id", id);
+            return Attribute(Attributes.Id, id);
         }
         
         /// <summary>
