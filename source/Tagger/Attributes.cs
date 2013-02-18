@@ -21,5 +21,7 @@
         public const string Async = "async";
         public const string Href = "href";
         public const string Target = "target";
+        public const string Action = "action";
+        public const string Method = "method";
     }
 }
