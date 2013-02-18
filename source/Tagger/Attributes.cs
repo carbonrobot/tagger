@@ -19,5 +19,7 @@
         public const string Selected = "selected";
         public const string Source = "src";
         public const string Async = "async";
+        public const string Href = "href";
+        public const string Target = "target";
     }
 }
