@@ -40,6 +40,7 @@
     <Compile Include="ButtonType.cs" />
     <Compile Include="Checkbox.cs" />
     <Compile Include="ContentTag.cs" />
+    <Compile Include="Span.cs" />
     <Compile Include="Div.cs" />
     <Compile Include="Form.cs" />
     <Compile Include="Image.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="Hidden.cs" />
     <Compile Include="Optgroup.cs" />
     <Compile Include="Option.cs" />
+    <Compile Include="RadioList.cs" />
     <Compile Include="Script.cs" />
     <Compile Include="Select.cs" />
     <Compile Include="FormElement.cs" />
