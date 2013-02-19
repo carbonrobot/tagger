@@ -60,6 +60,12 @@
     <Compile Include="List.cs" />
     <Compile Include="ListItem.cs" />
     <Compile Include="ListType.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="TableCell.cs" />
+    <Compile Include="TableFooter.cs" />
+    <Compile Include="TableHeader.cs" />
+    <Compile Include="TableHeaderCell.cs" />
+    <Compile Include="TableRow.cs" />
     <Compile Include="Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Targets.cs" />
