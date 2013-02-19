@@ -1,7 +1,9 @@
 Tagger
 ===============================================================
 
-A fluid html tag library built with C#
+Tagger is a fluid Html tag builder that supports Html creation in a compile safe and testable way.
+
+Installation available on NuGet [http://nuget.org/packages/Tagger/](http://nuget.org/packages/Tagger/)
 
 ### Basic usages
 
