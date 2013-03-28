@@ -1,1 +1,1 @@
-nuget pack -build ../source/Tagger/Tagger.csproj
+..\source\.nuget\nuget push %1%
