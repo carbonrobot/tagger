@@ -9,7 +9,7 @@
     <projectUrl>http://carbonrobot.github.com/tagger</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Corrected the inheritance chain issue when using deeply nested tags.</releaseNotes>
+    <releaseNotes>Added support for tables</releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>Fluid Html Tag Tagger Tagbuilder</tags>
   </metadata>
