@@ -61,6 +61,7 @@
     <Compile Include="ListItem.cs" />
     <Compile Include="ListType.cs" />
     <Compile Include="Table.cs" />
+    <Compile Include="TableBody.cs" />
     <Compile Include="TableCell.cs" />
     <Compile Include="TableFooter.cs" />
     <Compile Include="TableHeader.cs" />

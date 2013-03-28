@@ -6,15 +6,12 @@
 
         public TableRow(params TableCell[] cells) : this()
         {
-            this.AddCells(cells);
+            this.Add(cells);
         }
-
-        public TableRow AddCells(params TableCell[] cells)
+        public TableRow(params TableHeaderCell[] cells)
+            : this()
         {
-            for (var i = 0;i < cells.Length;i++)
-                this.Add(cells[i]);
-
-            return this;
+            this.Add(cells);
         }
     }
 }
