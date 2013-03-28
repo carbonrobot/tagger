@@ -131,7 +131,34 @@ var tag = new Select().Add(options);
 
 <h3>Tables</h3>
 
-<p>Coming Soon!</p>
+<p>Tables follow the same basic usage, but have a couple helper methods for quick table creation.</p>
+
+<p>Simple tables that only contain string text can be created like this:</p>
+
+<pre><code>var table = new Table()
+    .Add(new TableRow(new TableCell("Apples"), new TableCell("Oranges")));
+</code></pre>
+
+<p>Shortcut method that does the same thing as the above statement:</p>
+
+<pre><code>var table = new Table()
+    .AddRow("Apples", "Oranges", "Bananas");
+</code></pre>
+
+<p>More complex tables with headers and footers</p>
+
+<pre><code>var table = new Table()
+    .Add(new TableHeader()
+             .Add(new TableRow(new TableHeaderCell("Id"), new TableHeaderCell("Name"))
+             )
+    ).Add(new TableBody()
+              .Add(new TableRow(new TableCell("1234"), new TableCell("Apples"))
+              )
+    ).Add(new TableFooter()
+              .Add(new TableRow(new TableCell("Id"), new TableCell("Name"))
+              )
+    );
+</code></pre>
       </section>
     </div>
 
