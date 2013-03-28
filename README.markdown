@@ -91,4 +91,28 @@ Some form elements have special usage
 
 ### Tables
 
-Coming Soon!
+Tables follow the same basic usage, but have a couple helper methods for quick table creation.
+
+Simple tables that only contain string text can be created like this:
+
+	var table = new Table()
+        .Add(new TableRow(new TableCell("Apples"), new TableCell("Oranges")));
+
+Shortcut method that does the same thing as the above statement:
+
+	var table = new Table()
+        .AddRow("Apples", "Oranges", "Bananas");
+
+More complex tables with headers and footers
+
+	var table = new Table()
+        .Add(new TableHeader()
+                 .Add(new TableRow(new TableHeaderCell("Id"), new TableHeaderCell("Name"))
+                 )
+        ).Add(new TableBody()
+                  .Add(new TableRow(new TableCell("1234"), new TableCell("Apples"))
+                  )
+        ).Add(new TableFooter()
+                  .Add(new TableRow(new TableCell("Id"), new TableCell("Name"))
+                  )
+        );
